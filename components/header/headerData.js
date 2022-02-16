@@ -26,27 +26,31 @@ export default [
   },
   {
     id: 6,
-    idnm: "medium",
+    idnm: "https://twitter.com/home",
+    target:"_blank",
     heading: "MEDIUM",
   },
   {
     id: 7,
-    idnm: "discord",
+    idnm: "https://twitter.com/home",
+    target:"_blank",
     heading: "DISCORD",
   },
   {
     id: 8,
-    idnm: "twitter",
+    idnm: "https://twitter.com/home",
+    target:"_blank",
     heading: "TWITTER",
   },
   {
     id: 9,
-    idnm: "visitcollection",
+    idnm: "https://twitter.com/home",
+    target:"_blank",
     heading: "VISIT COLLECTION",
   },
   {
     id: 10,
-    idnm: "claimroyalty",
+    idnm: "roadStep",
     heading: "CLAIM ROYALTY",
   },
 ];

@@ -14,7 +14,6 @@ import {
   Button,
 } from "reactstrap";
 import menuItems from './headerData';
-import Image from 'next/image';
 
 const header = props => {
   const [isOpenMenu, setOpen] = useState(false);
@@ -42,6 +41,7 @@ const header = props => {
   let targetId = menuItems.map((item) => {
     return item.idnm;
   });
+  targetId  =targetId.filter(s=> s !=null);
   return (
     <React.Fragment>
       <div id="navbar"
@@ -62,15 +62,15 @@ const header = props => {
               isOpen={isOpenMenu}
               navbar
             >
-              <ScrollspyNav
-                scrollTargetIds={targetId}
-                scrollDuration="800"
-                headerBackground="true"
-                activeNavClass="active"
-                className="navbar-collapse justify-content-center"
+                <ScrollspyNav  scrollTargetIds={targetId}
+              scrollDuration="800"
+              headerBackground="true"
+              activeNavClass="active"
+              className="navbar-collapse justify-content-center"
               >
+              
                  <NavbarBrand className="logo" href="/">
-            <img src="/images/crypto-logo.png" height={150} width={150} />
+            <img src="/images/crypto-logo.png" height={100} width={100} />
             </NavbarBrand>
                 <Nav navbar className="navbar-center" id="mySidenav">
                   {menuItems.map((item, key) => (
