@@ -28,31 +28,57 @@ const processes = [
 const Strategy= props => {
     return (
         <React.Fragment>
-            <section className="section bg-light">
+            <section className="section strategy-box" id='strategy'>
                 <Container>
-                    {/* section title */}
-                    <SectionTitle
-                        title="WORK PROCESS"
-                        desc="In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts."
-                    />
+                        <Row className="vertical-content">
+                        <h3 className='heavy'>
+                        MARKETIN STRATEGIES
+                                </h3>
+                        <Col lg={6}>
+                              <p>
+                              1. Kalao stake income raffle will held live on twitter.</p>
+                              <p>2. Raid suggestion channel will be created on discord, users can leave related links and community managers or team member will lead the raid.</p>
 
-                    <Row>
-                        <Col lg={6} className="text-center process-left-icon-1">
-                            <i className="pe-7s-angle-right"></i>
+                              <p>3. A whitelist group will be created to be given to holders, regarding upcoming other projects. </p>
+
+                              <p>4. A new chinese speaker moderator is hired to strengthen the bond with our asian community. </p>
+
+                              <p>5. Regular twitter spaces will be held for a long term, sustainable global marketing. </p>
+
+                              <p>6. Global “Content Contest” will be held. </p>
+
+                              <p>7. “Floor sweeping challenge” & “floor hunt” contests will be held. </p>
+
+                              <p>8. There will be spontaneous gatherings for our holders rather than the grand dickheads party.</p>
+                              <p>9. Hodl chat will be eligible for many privileges such as Alpha Mints & Whitelist spots. </p>
+
+                              <p>10. Global promoters will be hired for advertisement and giveaways. </p>
+
+                                  
                         </Col>
-                        <Col lg={6} className="text-center process-left-icon-2">
-                            <i className="pe-7s-angle-right"></i>
+                        <Col lg={6}>
+                            <div className="features-right text-right">
+                            <p>
+                              1. Kalao stake income raffle will held live on twitter.</p>
+                              <p>2. Raid suggestion channel will be created on discord, users can leave related links and community managers or team member will lead the raid.</p>
+
+                              <p>3. A whitelist group will be created to be given to holders, regarding upcoming other projects. </p>
+
+                              <p>4. A new chinese speaker moderator is hired to strengthen the bond with our asian community. </p>
+
+                              <p>5. Regular twitter spaces will be held for a long term, sustainable global marketing. </p>
+
+                              <p>6. Global “Content Contest” will be held. </p>
+
+                              <p>7. “Floor sweeping challenge” & “floor hunt” contests will be held. </p>
+
+                              <p>8. There will be spontaneous gatherings for our holders rather than the grand dickheads party.</p>
+                              <p>9. Hodl chat will be eligible for many privileges such as Alpha Mints & Whitelist spots. </p>
+
+                              <p>10. Global promoters will be hired for advertisement and giveaways. </p>
+
+                            </div>
                         </Col>
-                    </Row>
-                    <Row className="mt-5">
-                        <StrategyBox processes={processes} />
-                        <div className="text-center mx-auto">
-                            <Link
-                                href="#"
-                            >
-                                <a className="btn btn-primary waves-light waves-effect mt-5">Get Started <i className="mdi mdi-arrow-right"></i></a>
-                            </Link>
-                        </div>
                     </Row>
                 </Container>
             </section>
