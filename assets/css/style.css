@@ -1,5 +1,22 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Modak:wght@300;400;500&display=swap");
+@font-face {
+  font-family: 'Avenir';
+  src: url("/fonts/Avenir.ttc");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Druk Text Wide Cy App Heavy Italic';
+  src:  url('/fonts/DrukTextWideHeavy.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Druk Text Wide Cy App Heavy Med';
+  src:  url('/fonts/DrukTextWideCyAppMedium.ttf')  format('truetype');
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden !important;
@@ -37,7 +54,7 @@ p {
 }
 
 .section {
-  padding-top: 80px;
+  padding-top: 10px;
   padding-bottom: 80px;
   position: relative;
 }
@@ -211,6 +228,29 @@ b {
   font-weight: 600;
 }
 
+.roadstep-title {
+  font-family:"Druk Text Wide Cy App Heavy Italic" ;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 40px;
+  margin-top: 20px;
+}
+.roadstep-subtitle {
+  font-family:"Druk Text Wide Cy App Heavy Med" ;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.team-title{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  font-family: "Druk Text Wide Cy App Heavy Italic" !important;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.1rem;
+  font-weight: bolder;
+}
 .section-title {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -930,6 +970,11 @@ iframe {
 .text-muted {
   color: #95a0ab !important;
 }
+.text-about-p {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
 .text-muted-subscribe {
   color: #01ffa9 !important;
 }
@@ -1207,7 +1252,7 @@ iframe {
 }
 
 .bg-light {
-  background-color: #f8fbff;
+  background-color: #fff !important;
 }
 
 .bg-soft-light {
@@ -1291,6 +1336,7 @@ iframe {
   margin-left: 50px;
   background-color: rgba(48, 7, 90,0.5);
   border-radius: 10px;
+  padding: 0 25px 0 25px !important;
 }
 
 .navbar-custom .navbar-nav li a {
@@ -1438,7 +1484,7 @@ iframe {
 .is-sticky .navbar-custom {
   margin-top: 0px;
   padding: 10px 0px !important;
-  background-color: #272a33 !important;
+  background-color: #fff !important;
   -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
 }
@@ -1724,11 +1770,24 @@ iframe {
   left: 0;
   right: 0;
 }
+.teaser-box >  h1{
+  color :#01ffa9;
+  font-family:"Druk Text Wide Cy App Heavy Italic";
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
 
+.teaser-image {
+  background-image: url('/images/teaser/teaser-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
 .features-box h3 {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   margin-top: 0;
   line-height: 36px;
+  font-family: "Poppins", sans-serif;
 }
 
 .features-box .features-item-list li {
@@ -1748,15 +1807,25 @@ iframe {
   top: 14px;
 }
 
+
 .features-img {
-  max-width: 500px;
+  max-width: 300px;
   margin: 0 0 0 auto;
 }
+.features-img > img {
+  transition: all .2s ease-in-out;
+}
 
+.features-img > img:hover {
+  transform: scale(1.1);
+}
 .services-box {
   padding: 15px;
 }
-
+.roadmap-img {
+  max-width: 300px;
+  margin: 0 0 0 auto;
+}
 .services-box i {
   font-size: 32px;
   height: 68px;
@@ -1781,7 +1850,14 @@ iframe {
   background-size: cover;
   background-position: center;
 }
-
+.bg-roadmap {
+  background-color: #ffef42;
+  max-width: 100%;
+}
+.web-desc {
+  font-family: "Avenir";
+  font-size: 16px;
+}
 .bg-get-start {
   background: url("/images/img-2.jpg");
   background-repeat: no-repeat;
@@ -1831,74 +1907,56 @@ iframe {
   left: 30%;
 }
 
-.pricing-box {
-  padding: 50px 40px 50px 40px;
-  border: 1px solid #ecf0f5;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1) !important;
-  box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1) !important;
+.heavy {
+    font-family:"Druk Text Wide Cy App Heavy Italic";
+    font-size: 2.5em;
+    margin: 25px;
+}
+.img-fluid-9 {
+   max-width: 90%;
+   height: auto;
+   transition: all .2s ease-in-out;
+}
+.img-fluid-9:hover{
+  transform: scale(1.1);
+}
+.roadmap-box{
+   width: 100%;
+   height: 500px;
+   background-image: url('/images/roadmap/roadmap.png');
+   background-repeat: no-repeat;
+   background-size: contain;
 }
 
-.pricing-box h4 {
-  font-size: 15px;
+.strategy-box {
+  
+  background-image:  url('/images/strategies/strategies-backgorund.png');
 }
-
-.pricing-box h1 {
-  font-size: 36px;
-  padding-top: 5px;
+.roadstep-box {
+  background-image:  url('/images/roadstep/road-step-bg.png');
 }
-
-.pricing-box .pricing-border {
-  width: 100%;
-  height: 1px;
-  margin-top: 35px;
-  background-color: #ecf0f5;
-}
-
-.pricing-box .plan-features p {
-  padding-top: 5px;
-}
-
-.price-active {
-  -webkit-box-shadow: 0 0rem 4rem rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0rem 4rem rgba(0, 0, 0, 0.1) !important;
-}
-
 .team-box {
-  border-bottom: 1px solid #ecf0f5;
+  background-image:  url('/images/team/team-bg.png'),linear-gradient(#2008a5, yellow);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+.strategy-box p{
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .team-box .team-name {
-  font-size: 16px;
+  font-size: 18px;
   padding-top: 20px;
   margin-bottom: 7px;
+  font-family: "Druk Text Wide Cy App Heavy Italic";
 }
 
 .team-box .team-designation {
   font-size: 13px;
-  color: #a8aeb4;
+  font-family: "Druk Text Wide Cy App Heavy Italic";
 }
 
-.testimonial-box img {
-  margin: -40px auto;
-  height: 68px;
-  width: 68px;
-}
-
-.testimonial-box .testimonial-decs {
-  border: 1px solid #ecf0f5;
-  border-radius: 8px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1) !important;
-  box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1) !important;
-}
-
-.testimonial-box .testimonial-decs p {
-  padding: 60px 25px 30px;
-  line-height: 24px;
-  font-style: italic;
-}
 
 .blog-box .blog-title {
   color: #272a33;
@@ -2194,6 +2252,7 @@ ul.pattern .color8 {
   }
   .navbar-custom .navbar-nav {
     margin-left: 0px;
+    padding: 0 25px 0 25px;
   }
   .navbar-custom .navbar-nav li.active {
     border-color: transparent;
@@ -2203,6 +2262,7 @@ ul.pattern .color8 {
     transition: all 0.4s;
     margin: 0px;
     color: rgba(255, 255, 255, 0.6) !important;
+    cursor: pointer;
   }
   .navbar-custom > .container {
     width: 90%;
@@ -2240,7 +2300,7 @@ ul.pattern .color8 {
     padding-top: 130px;
   }
   .features-img {
-    margin-top: 30px;
+    margin-top: 1px;
   }
   .pricing-box {
     margin-top: 30px;
