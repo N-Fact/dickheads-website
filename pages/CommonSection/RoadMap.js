@@ -5,33 +5,30 @@ import Link from "next/link";
 function RoadMap(props) {
     return (
         <React.Fragment>
-            <section className="section section-lg bg-web-desc">
-                <div className="bg-overlay"></div>
-                <Container>
-                    <Row>
-                        <Col lg={12} className="text-center">
-                            <h2 className="text-white">Build your dream website today</h2>
-                            <p className="pt-3 home-desc">
-                                But nothing the copy said could convince her and so it didn’t
-                                take long until a few insidious Copy Writers ambushed her.
-                            </p>
-                            <Link
-                                href="#"
-                            >
-                                <a className="btn btn-white mt-4 waves-effect waves-light mb-5">View Plan & Pricing</a>
-                            </Link>
+            <section className="section bg-roadmap" id="roadmap">
+            <Container>
+                    <Row className="vertical-content">
+                        <Col lg={9}>
+                        <h3 className='heavy'>
+                               ROADMAP
+                                </h3>
+                            <div className="roadmap-box">
+                            </div>
+                        </Col>
+                        <Col lg={3}>
+                            <div className="roadmap-img features-right text-right">
+                                <img
+                                    alt="Crypto Dickheads roadmap "
+                                    src={"/images/roadmap/roadmap-maskot.png"}
+                                    className="img-fluid-9"
+                                />
+                            </div>
                         </Col>
                     </Row>
                 </Container>
-                <div className="bg-pattern-effect">
-                    <img
-                        alt="dorsin"
-                        src={"/images/bg-pattern.png"}
-                    />
-                </div>
             </section>
         </React.Fragment>
     );
 }
 
-export default WebsiteDesc;
+export default RoadMap;
