@@ -65,12 +65,12 @@ class ScrollspyNav extends Component {
             navLink.addEventListener("click", (event) => {
                 event.preventDefault();
                 let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
-
-                if (sectionID) {
+                if (!sectionID.includes("http")) {
                     let scrollTargetPosition = (document.getElementById(sectionID).offsetTop || 0 ) - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
                     this.scrollTo(window.pageYOffset, scrollTargetPosition, this.scrollDuration);
                 } else {
-                    this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
+                    window.open(sectionID,"_bank");
+                    //this.scrollTo(window.pageYOffset, 0, this.scrollDuration);
                 }
             });
         })
@@ -85,7 +85,8 @@ class ScrollspyNav extends Component {
     scrollSection = () => {
         let scrollSectionOffsetTop;
         this.scrollTargetIds.forEach((sectionID, index) => {
-            scrollSectionOffsetTop = (document.getElementById(sectionID).offsetTop || 0 ) - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
+           if(!sectionID.includes("http")) {
+            scrollSectionOffsetTop = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
 
             if (window.pageYOffset >= scrollSectionOffsetTop && window.pageYOffset < scrollSectionOffsetTop + document.getElementById(sectionID).scrollHeight) {
                 this.getNavLinkElement(sectionID).classList.add(this.activeNavClass);
@@ -101,6 +102,9 @@ class ScrollspyNav extends Component {
                 this.getNavLinkElement(sectionID).parentNode.classList.add(this.activeNavClass);
                 this.clearOtherNavLinkActiveStyle(sectionID);
             }
+
+           }
+            
         });
     }
     clearOtherNavLinkActiveStyle(excludeSectionID) {

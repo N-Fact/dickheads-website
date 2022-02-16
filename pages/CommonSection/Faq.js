@@ -62,12 +62,7 @@ Yes, our holders will be whitelisted for the special collection. The colection w
                         </Col>
                     </Row>
                 </Container>
-                <div className="bg-pattern-effect">
-                    <img
-                        alt="dorsin"
-                        src={"/images/bg-pattern.png"}
-                    />
-                </div>
+                
             </section>
         </React.Fragment>
     );

@@ -1,35 +1,22 @@
 import React from 'react';
-import { Container, Row, Col, Form } from "reactstrap";
+import { Container, Row, Col, Form, NavbarBrand } from "reactstrap";
 import Link from "next/link";
-import FooterLink from './FooterLink';
-
-const links = [
+const links = 
     {
-        title: "CRYPTO DICKHEADS",
-        child: [
-            { link: "#", title: "ABOUT" },
-            { link: "#", title: "ROADMAP" },
+        items: [
+            { link: "#about", title: "ABOUT" },
+            { link: "#roadmap", title: "ROADMAP" },
             { link: "#", title: "STRATEGY" },
-            { link: "#", title: "TEAM" },
-        ],
-    },
-    {
-        title: "Information",
-        child: [
+            { link: "#team", title: "TEAM" },
             { link: "#", title: "VISIT COLLECTION" },
             { link: "#", title: "MEDIUM" },
             { link: "#", title: "CLAIM ROYALTY" },
-        ],
-    },
-    {
-        title: "Support",
-        child: [
-            { link: "#", title: "FAQ" },
+            { link: "#faq", title: "FAQ" },
             { link: "#", title: "TWITTER" },
             { link: "#", title: "DISCORD" },
         ],
-    },
-];
+    };
+
 
 const Footer = props => {
     return (
@@ -37,35 +24,18 @@ const Footer = props => {
             <footer className="footer">
                 <Container>
                     <Row>
-                        {links.map((fLink, key) => (
-                            <Col key={key} lg={3} className="mt-4">
-                                <h4>{fLink.title}</h4>
-                                <div className="text-muted mt-4">
-                                    <ul className="list-unstyled footer-list">
-                                        {fLink.child.map((fLinkChild, key) => (
-                                            <li key={key}>
+                    <Col lg={2}>
+                           <img src="/images/crypto-logo.png" height={100} width={100} />
+                        </Col>
+                        <Col lg={8} className='text-center d-flex justify-content-center align-items-center'>
+                                    <ul className="list-inline footer-list">
+                                        {links.items.map((fLinkChild, key) => (
+                                            <li key={key} className="list-inline-item">
                                                 <Link href={fLinkChild.link}><a>{fLinkChild.title}</a></Link>
                                             </li>
                                         ))}
                                     </ul>
-                                </div>
-                            </Col>
-                        ))}
-
-                        <Col lg={3} className="mt-4">
-                            <div className="text-muted-subscribe mt-4">
-                            <img src="/images/crypto-logo.png" height={150} width={150} />
-                            </div>
-                            {/* <Form className="subscribe">
-                                <input
-                                    placeholder="Email"
-                                    className="form-control"
-                                    required
-                                />
-                                <Link href="#">
-                                    <a className="submit"><i className="pe-7s-paper-plane"></i></a>
-                                </Link>
-                            </Form> */}
+                                
                         </Col>
                     </Row>
                 </Container>
