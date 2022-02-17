@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 const AboutUs = props => {
     return (
         <React.Fragment>
-            <section className="section bg-light" id="about">
+            <section className="section bg-light about" id="about">
                 <Container>
                     <Row className="vertical-content">
                         <Col lg={6}>

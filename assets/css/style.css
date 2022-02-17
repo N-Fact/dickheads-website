@@ -1,8 +1,23 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Modak:wght@300;400;500&display=swap");
 @font-face {
-  font-family: 'Avenir';
-  src: url("/fonts/Avenir.ttc");
+  font-family: 'AvenirLTStd-Book';
+  src: url("/fonts/AvenirLTStd-Book.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AvenirLTStd-Roman';
+  src: url("/fonts/AvenirLTStd-Roman.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirLTStd-Black';
+  src: url("/fonts/AvenirLTStd-Black.otf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -97,14 +112,10 @@ p {
 }
 
 .bg-overlay {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#512da8),
-    to(#9424ff)
-  );
-  background: linear-gradient(to right, #512da8, #9424ff);
+  background: url("/images/home2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   opacity: 1;
   position: absolute;
   height: 100%;
@@ -240,7 +251,14 @@ b {
   font-weight: bold;
   font-size: 20px;
 }
-
+.team-bird {
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.team-bird > img {
+  width: 50%;
+}
 .team-title{
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1490,15 +1508,66 @@ iframe {
 }
 
 .bg-home {
-  /* background: url("/images/bg-home.png"); */
+  background: url("/images/bg-home.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+.home-left > img:nth-child(1) {
+  animation: slidein 2s ;
+  animation-duration: 2s;
+  margin-top: 2px;
+  margin-top: 35px;
+}
+.home-left > img:nth-child(2) {
+  animation: slidein1 4s ;
+  margin-top: 27px;
+  animation-duration: 4s;
+  animation-name: slidein1;
+}
+.home-left > img:nth-child(3) {
+  position: absolute;
+  animation: slidein2 6s ;
+  animation-duration: 6s;
+  animation-name: slidein2;
+  margin-top: 57px;
+  margin-left: -48px;
+}
+.home-right > img:nth-child(1) {
+  animation: slidein 2s ;
+  animation-duration: 2s;
+  margin-top: 29px;
+}
+.home-right > img:nth-child(2) {
+  animation: slidein1 4s ;
+  margin-top: 56px;
+  animation-duration: 4s;
+  animation-name: slidein1;
+}
+.home-right > img:nth-child(3) {
+  position: absolute;
+  animation: slidein2 6s ;
+  animation-duration: 6s;
+  animation-name: slidein2;
+  margin-top: 57px;
+}
+@keyframes slidein {
+  from {transform: translate(-90%); transition-delay: 250ms;}
+  to { transform:scale(1)}
+}
+ @keyframes slidein1 {
+  from {transform: translate(-180%);}
+  to { transform:scale(1)}
+}
+@keyframes slidein2 {
+  from {transform: translate(-180%);}
+  to { transform:scale(1)}
+} 
 
 .home-title {
   font-size: 46px;
   line-height: 64px;
+  color:#29ffa6;
 }
 
 .display-table-cell {
@@ -1543,10 +1612,116 @@ iframe {
 
 /* ------------- Demo 1 bg-pattern ------------- */
 .home-half {
-  padding-bottom: 150px;
-  padding-top: 220px;
+  padding-bottom: 1px;
+  padding-top: 100px;
+}
+.glitch {
+  color: rgb(223, 191, 191);
+  position: relative;
+  animation: glitch 5s 5s infinite;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: -5px 0 magenta;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -5px 0 lightgreen;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
 }
 
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+.sold-image {
+  margin-left :90px !important;
+}
+.glow {
+  color: rgb(223, 191, 191);
+  position: relative;
+  animation: glitch 5s 5s infinite;
+  text-shadow: 0 0 1000px rgb(223, 191, 191);
+  color: transparent;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+@keyframes glitch-2 {
+  1%{
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+.soldmain {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sold {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left :90px !important;
+}
+.sold .sold-title {
+  color:#9424ff;
+  font-size: 30px;
+  font-weight: bolder;
+  margin:0 auto;
+}
+.sold .sold-desc {
+  color:#9424ff;
+  color:#9424ff;
+  font-size: 30px;
+  font-weight: 600;
+}
 .bg-pattern-effect {
   position: absolute;
   bottom: 0px;
@@ -1770,6 +1945,11 @@ iframe {
   left: 0;
   right: 0;
 }
+.about {
+  background-image: url('/images/about/about-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .teaser-box >  h1{
   color :#01ffa9;
   font-family:"Druk Text Wide Cy App Heavy Italic";
@@ -1933,7 +2113,7 @@ iframe {
   background-image:  url('/images/strategies/strategies-backgorund.png');
 }
 .roadstep-box {
-  background-image:  url('/images/roadstep/road-step-bg.png');
+  background-image:  url('/images/roadstep/roda-step-bg.png');
 }
 .team-box {
   background-image:  url('/images/team/team-bg.png'),linear-gradient(#2008a5, yellow);
@@ -2035,8 +2215,8 @@ textarea.form-control {
 }
 
 .footer {
-  padding: 50px 0;
-  background-color: #272a33;
+  padding: 20px 0;
+  background-color: #000;
 }
 
 .footer h4 {
@@ -2045,14 +2225,14 @@ textarea.form-control {
 
 .footer .footer-list li a {
   color: #01ffa9;
-  padding-top: 8px;
+  padding: 10px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.footer .footer-list li ahover {
+.footer .footer-list li a:hover {
   color: #dce6f3;
 }
 
@@ -2288,9 +2468,6 @@ ul.pattern .color8 {
   .navbar-toggler:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
-  }
-  .home-title {
-    font-size: 32px;
   }
   .bg-pattern-effect {
     bottom: -8px;

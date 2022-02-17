@@ -66,7 +66,7 @@ class ScrollspyNav extends Component {
                 event.preventDefault();
                 let sectionID = this.getNavToSectionID(navLink.getAttribute("href"));
                 if (!sectionID.includes("http")) {
-                    let scrollTargetPosition = (document.getElementById(sectionID).offsetTop || 0 ) - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
+                    let scrollTargetPosition = document.getElementById(sectionID).offsetTop - (this.headerBackground ? document.querySelector("div[data-nav='list']").scrollHeight : 0);
                     this.scrollTo(window.pageYOffset, scrollTargetPosition, this.scrollDuration);
                 } else {
                     window.open(sectionID,"_bank");
