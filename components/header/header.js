@@ -70,7 +70,7 @@ const header = props => {
               >
               
                  <NavbarBrand className="logo" href="#home">
-            <img src="/images/crypto-logo.png" height={100} width={100} />
+            <img src="/images/crypto-logo.png" height={75} width={75} />
             </NavbarBrand>
                 <Nav navbar className="navbar-center" id="mySidenav">
                   {menuItems.map((item, key) => (

@@ -51,17 +51,18 @@ const Section = () => {
                                 
                                 </Col>
                                 <Col lg={4} className="text-center soldmain">
-                                    <div className='glitch sold' text="SOLD OUT">
-                                    <span className='glow'>SOLD OUT</span>
-                                    <span className='glitch sold-title '>SOLD OUT</span>
-                                    <span className='sold-desc '>in 11 mins</span>
-                                    <span className='glow'>in 11 mins</span>
-                                    </div>
+                                   
                                 <img
                                     alt="Crypto Dickheads"
                                     src={"/images/home/gameboy.png"}
                                     className="img-fluid sold-image"
                                 />
+                                 <div className='glitch sold pt-5' text="SOLD OUT">
+                                    <span className='glow'>SOLD OUT</span>
+                                    <span className='glitch sold-title '>SOLD OUT</span>
+                                    <span className='sold-desc '>in 11 mins</span>
+                                    <span className='glow'>in 11 mins</span>
+                                    </div>
                                 </Col>
                                 <Col lg={4} className="home-right">
                                 <img

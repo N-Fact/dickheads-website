@@ -767,7 +767,9 @@ iframe {
 .bg-dark {
   background-color: #272a33;
 }
-
+.bg-black {
+  background-color: #000;
+}
 .bg-soft-dark {
   background-color: rgba(39, 42, 51, 0.1) !important;
 }
@@ -1513,43 +1515,31 @@ iframe {
   background-size: cover;
   background-position: center;
 }
+.home-left {
+  display: flex;
+  justify-content: space-evenly;
+}
+.home-right {
+  display: flex;
+  justify-content: space-evenly;
+}
 .home-left > img:nth-child(1) {
   animation: slidein 2s ;
-  animation-duration: 2s;
-  margin-top: 2px;
-  margin-top: 35px;
 }
 .home-left > img:nth-child(2) {
   animation: slidein1 4s ;
-  margin-top: 27px;
-  animation-duration: 4s;
-  animation-name: slidein1;
 }
 .home-left > img:nth-child(3) {
-  position: absolute;
   animation: slidein2 6s ;
-  animation-duration: 6s;
-  animation-name: slidein2;
-  margin-top: 57px;
-  margin-left: -48px;
 }
 .home-right > img:nth-child(1) {
   animation: slidein 2s ;
-  animation-duration: 2s;
-  margin-top: 29px;
 }
 .home-right > img:nth-child(2) {
   animation: slidein1 4s ;
-  margin-top: 56px;
-  animation-duration: 4s;
-  animation-name: slidein1;
 }
 .home-right > img:nth-child(3) {
-  position: absolute;
   animation: slidein2 6s ;
-  animation-duration: 6s;
-  animation-name: slidein2;
-  margin-top: 57px;
 }
 @keyframes slidein {
   from {transform: translate(-90%); transition-delay: 250ms;}
@@ -1670,9 +1660,7 @@ iframe {
 
   animation: fudge 7s ease-in-out alternate infinite;
 }
-.sold-image {
-  margin-left :90px !important;
-}
+
 .glow {
   color: rgb(223, 191, 191);
   position: relative;
@@ -1701,14 +1689,15 @@ iframe {
 }
 .soldmain {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .sold {
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin-left :90px !important;
+  margin-left: 90px !important;
+  padding: 13px;
 }
 .sold .sold-title {
   color:#9424ff;
@@ -1958,11 +1947,31 @@ iframe {
 }
 
 .teaser-image {
-  background-image: url('/images/teaser/teaser-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 400px;
+  max-height: 500px;
 }
+
+.teaser-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.video-react {
+  width: 100%;
+}
+/* .video-react {
+  background-color: unset !important;
+  padding-top: 25% !important;
+}
+.video-react .video-react-video {
+  height: 100% !important;
+  width: 100%;
+}
+.video-react .video-react-poster {
+  background-color: unset !important;
+} */
 .features-box h3 {
   margin-bottom: 5px;
   margin-top: 0;
@@ -2216,7 +2225,7 @@ textarea.form-control {
 
 .footer {
   padding: 20px 0;
-  background-color: #000;
+   background-color: #1d1a18; 
 }
 
 .footer h4 {
