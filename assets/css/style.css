@@ -1954,7 +1954,7 @@ iframe {
 .teaser-box >  h1{
   color :#01ffa9;
   font-family:"Druk Text Wide Cy App Heavy Italic";
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 40px;
 }
 
@@ -2128,7 +2128,11 @@ iframe {
    background-repeat: no-repeat;
    background-size: contain;
 }
-
+@media (min-width: 276px) and (max-width: 767.98px) { 
+  .roadmap-box{
+    height: 200px;
+ }
+ }
 .strategy-box {
   
   background-image:  url('/images/strategies/strategies-backgorund.png');
