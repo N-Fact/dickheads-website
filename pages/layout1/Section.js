@@ -19,9 +19,7 @@ const Section = () => {
                 className="section bg-home home-half"
                 id="home"
             >
-                
-                {/* <div className="bg-overlay"></div>
-                <div className="bg-home-greenoverlay"></div> */}
+                  <div className="bg-home-greenoverlay"></div>
                 <Container>
                       
                             <Row >
@@ -50,19 +48,35 @@ const Section = () => {
                                 />
                                 
                                 </Col>
-                                <Col lg={4} className="text-center soldmain">
-                                   
-                                <img
+                                <Col lg={4} className="text-center ">
+                                   <div className='soldmain'>
+                                   <img
                                     alt="Crypto Dickheads"
                                     src={"/images/home/gameboy.png"}
                                     className="img-fluid sold-image"
                                 />
-                                 <div className='glitch sold pt-5' text="SOLD OUT">
-                                    <span className='glow'>SOLD OUT</span>
-                                    <span className='glitch sold-title '>SOLD OUT</span>
+                                   <div className='glitch sold' text="SOLD OUT">
+                                    <span className='glow'> SOLD </span>
+                                    <span className='glow'> OUT</span>
+                                    <span className='glitch sold-title '> SOLD </span>
+                                    <span className='glitch sold-out'> OUT</span>
                                     <span className='sold-desc '>in 11 mins</span>
                                     <span className='glow'>in 11 mins</span>
                                     </div>
+                                   </div>
+                               <div className='home-info'>
+                               <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/homeinfo.png"}
+                                    className="img-fluid sold-image"
+                                />
+                                <div className='home-desc'>
+                                    <p>DROP COUNT: 5555</p>
+                                    <p>TRAIT CLASSES: 10</p>
+                                    <p>TRAITS: 600+</p>
+                                    <p>PRICE: 1 AVAX </p>
+                                </div>
+                               </div>
                                 </Col>
                                 <Col lg={4} className="home-right">
                                 <img

@@ -24,8 +24,8 @@ const Teaser = (props) => {
                         </Col>
                     </Row>
                 </Container>
-                <div  className='container-fluid teaser-image'>
-                  <div className='teaser-video'>
+                <div  className='container-fluid dickhead-video'>
+                  <div>
                   <Player
                    ref={p => {
                     player = p;
@@ -33,10 +33,8 @@ const Teaser = (props) => {
                 playsInline
                 src="/images/teaser/revize1.mp4"
                 autoPlay ={false}
-                fluid = {false}
+                fluid = {true}
                 muted={true}
-                width={500}
-                height={400}
                 >
             <BigPlayButton position="center" />
                 </Player>
