@@ -19,47 +19,86 @@ const Section = () => {
                 className="section bg-home home-half"
                 id="home"
             >
-                 
-                <div className="bg-overlay"></div>
-                <div className="bg-home-greenoverlay"></div>
-                <div className="display-table">
-                    <div className="display-table-cell">
-                        <Container>
-                            <Row className="justify-content-center">
-                                <Col lg={8} className="text-white text-center">
-                                    <h1 className="home-title">
+                  <div className="bg-home-greenoverlay"></div>
+                <Container>
+                      
+                            <Row >
+                                <Col lg={12} className="text-center pt-4">
+                                <h1 className="home-title">
                                     CRYPTO DICKHEADS
                                     </h1>
-                                    <p className="pt-3 home-desc">
-                                    SOLD OUT in 11 mins
-                                    </p>
-                                    {/* <p className="play-shadow mt-4">
-                                        <Link href="#">
-                                            <a
-                                                onClick={() => {
-                                                    openModal();
-                                                }}
-                                                className="play-btn video-play-icon"><i className="mdi mdi-play text-center"></i></a>
-                                        </Link>
-                                    </p> */}
                                 </Col>
                             </Row>
-                        </Container>
-                    </div>
-                </div>
-                <div className="bg-pattern-effect">
-                    <img
-                        alt="dorsin"
-                        src={"/images/bg-pattern.png"}
-                    />
-                </div>
+                            <Row >
+                                <Col lg={4} className='home-left'>
+                               <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_01.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-woman_02.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_03.png"}
+                                    className="img-fluid"
+                                />
+                                
+                                </Col>
+                                <Col lg={4} className="text-center ">
+                                   <div className='soldmain'>
+                                   <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/gameboy.png"}
+                                    className="img-fluid sold-image"
+                                />
+                                   <div className='glitch sold' text="SOLD OUT">
+                                    <span className='glow'> SOLD </span>
+                                    <span className='glow'> OUT</span>
+                                    <span className='glitch sold-title '> SOLD </span>
+                                    <span className='glitch sold-out'> OUT</span>
+                                    <span className='sold-desc '>in 11 mins</span>
+                                    <span className='glow'>in 11 mins</span>
+                                    </div>
+                                   </div>
+                               <div className='home-info'>
+                               <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/homeinfo.png"}
+                                    className="img-fluid sold-image"
+                                />
+                                <div className='home-desc'>
+                                    <p>DROP COUNT: 5555</p>
+                                    <p>TRAIT CLASSES: 10</p>
+                                    <p>TRAITS: 600+</p>
+                                    <p>PRICE: 1 AVAX </p>
+                                </div>
+                               </div>
+                                </Col>
+                                <Col lg={4} className="home-right">
+                                <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_04.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_05.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_06.png"}
+                                    className="img-fluid"
+                                />
+                                </Col>
+                            </Row>
+                           
+                 </Container>
             </section>
-            {/* <ModalVideo
-                channel="vimeo"
-                isOpen={isOpen}
-                videoId="287684225"
-                onClose={() => setisOpen(!isOpen)}
-            /> */}
         </React.Fragment>
     );
 }

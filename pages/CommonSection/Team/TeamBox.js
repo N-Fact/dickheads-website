@@ -9,6 +9,13 @@ const TeamBox = ({ teams }) => {
                     <div className="text-center hover-effect">
                         <div className="team-wrapper">
                             <div className="team-member">
+                                <div className='team-bird'>
+                                <img
+                                    alt="team"
+                                    src={"/images/team/tw_icon.png"}
+                                    className="img-fluid rounded"
+                                />
+                                </div>
                                 <img
                                     alt="team"
                                     src={team.image}

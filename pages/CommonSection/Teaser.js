@@ -1,11 +1,20 @@
-import React from 'react';
-import { Container, Row, Col } from "reactstrap";
-import Link from "next/link";
+import React, { useCallback, useContext, useEffect, useRef } from 'react';
+import { Container, Row, Col, Button } from "reactstrap";
+import { Player, ControlBar, PlayToggle ,BigPlayButton  } from 'video-react';
+import EventContext from '../Context/EventContext';
 
-const Teaser = () => {
+const Teaser = (props) => {
+
+      const {isplay}  = useContext(EventContext);
+      const player = useRef(Player);
+      useEffect(() => {
+        if(isplay){
+            player.play();
+        }
+      }, [player,isplay]);
     return (
-        <React.Fragment>
-            <section className="bg-dark" id='teaser'>
+        <React.StrictMode>
+            <section className="bg-black" id='teaser'>
                 <Container >
                     <Row className="align-items-center">
                         <Col lg={12}>
@@ -15,10 +24,24 @@ const Teaser = () => {
                         </Col>
                     </Row>
                 </Container>
-                <div className='teaser-image'>
+                <div  className='container-fluid dickhead-video'>
+                  <div>
+                  <Player
+                   ref={p => {
+                    player = p;
+                  }}
+                playsInline
+                src="/images/teaser/revize1.mp4"
+                autoPlay ={false}
+                fluid = {true}
+                muted={true}
+                >
+            <BigPlayButton position="center" />
+                </Player>
+                  </div>
                 </div>
             </section>
-        </React.Fragment>
+        </React.StrictMode>
     );
 }
 

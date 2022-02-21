@@ -24,11 +24,13 @@ const Footer = props => {
             <footer className="footer">
                 <Container>
                     <Row>
-                    <Col lg={2}>
-                           <img src="/images/crypto-logo.png" height={100} width={100} />
+                    <Col md={2} className="d-flex justify-content-end justify-content-center align-items-end col-xs-12">
+                           <div>
+                           <img src="/images/crypto-logo.png" height={75} width={75} />
+                           </div>
                         </Col>
-                        <Col lg={8} className='text-center d-flex justify-content-center align-items-center'>
-                                    <ul className="list-inline footer-list">
+                        <Col md={10} className='d-flex justify-content-center justify-content-start align-items-end col-xs-12'>
+                                    <ul className="list-inline footer-list d-flex flex-wrap justify-content-center">
                                         {links.items.map((fLinkChild, key) => (
                                             <li key={key} className="list-inline-item">
                                                 <Link href={fLinkChild.link}><a>{fLinkChild.title}</a></Link>

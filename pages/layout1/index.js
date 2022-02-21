@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import Section from "./Section";
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/header';
@@ -11,10 +11,15 @@ import FAQ from '../CommonSection/Faq';
 import Teaser from '../CommonSection/Teaser';
 
 const layout1 = props => {
+
+    const [isplay,setisplay] = useState(false);
+     const play = useCallback((data)=> {
+        console.log(data)
+     },[])
     return (
         <React.Fragment>
             {/* import Header */}
-            <Header />
+            <Header  play={play}/>
             <Section />
             <AboutUs />
             <RoadMap />
@@ -22,9 +27,8 @@ const layout1 = props => {
             <RoadStep />
             <Team />
             <FAQ />
-            <Teaser />
+            <Teaser isplay={isplay} />
             <Footer />
-
         </React.Fragment>
     );
 }

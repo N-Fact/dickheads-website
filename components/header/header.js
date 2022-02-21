@@ -69,8 +69,8 @@ const header = props => {
               className="navbar-collapse justify-content-center"
               >
               
-                 <NavbarBrand className="logo" href="/">
-            <img src="/images/crypto-logo.png" height={100} width={100} />
+                 <NavbarBrand className="logo" href="#home">
+            <img src="/images/crypto-logo.png" height={75} width={75} />
             </NavbarBrand>
                 <Nav navbar className="navbar-center" id="mySidenav">
                   {menuItems.map((item, key) => (
