@@ -7,7 +7,7 @@ const AboutUs = props => {
                 <Container className='container-fluid'>
                     <Row >
                         <Col lg={8}>
-                            <div className="features-box pt-5">
+                            <div className="features-box">
                                 <h3>
                                 WHO ARE THE
                                 </h3>
