@@ -5,7 +5,7 @@ const RoadStep = () => {
     return (
         <React.Fragment>
             <section className="section roadstep-box" id="roadStep">
-                <Container>
+                <Container className='pt-5'>
                     <Row>
                         <Col lg={6} className='text-center' >
                             <h1 className="roadstep-title text-black">
@@ -16,7 +16,7 @@ const RoadStep = () => {
                             </p>
                             <img src='/images/roadstep/roadmap-king.png' width={50} />
                         </Col>
-                        <Col lg={6} className='text-center'>
+                        <Col lg={6} className='text-center pb-5'>
                             <h1 className="roadstep-title text-black">
                             %100  of  Royalty 
                             </h1>

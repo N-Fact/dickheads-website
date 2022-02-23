@@ -1,12 +1,10 @@
-import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import { Container, Row, Col, Button } from "reactstrap";
-import { Player, ControlBar, PlayToggle ,BigPlayButton  } from 'video-react';
 import EventContext from '../Context/EventContext';
 // Modal Video
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
-
 
 const Teaserv1 = (props) => {
 
@@ -36,8 +34,8 @@ const Teaserv1 = (props) => {
                     </Row>
                 </Container>
                 <div  className='container-fluid teaser-image'>
-                <p className="play-shadow mmt-4">
-                                        <Link href="/images/teaser/revize1.mp4">
+                <p className="play-shadow">
+                                        <Link href="#teaser">
                                             <a
                                                 onClick={() => {
                                                     openModal();
@@ -46,9 +44,9 @@ const Teaserv1 = (props) => {
                                         </Link>
                    </p>
                 <ModalVideo
-                    channel="vimeo"
+                    channel="youtube"
                     isOpen={isOpen}
-                    videoId="287684225"
+                    videoId="82ruMXCgsgA"
                     onClose={() => setisOpen(!isOpen)}
                 />
                 </div>
