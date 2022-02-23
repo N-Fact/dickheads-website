@@ -4,10 +4,10 @@ const AboutUs = props => {
     return (
         <React.Fragment>
             <section className="section bg-light about" id="about">
-                <Container>
-                    <Row className="vertical-content">
-                        <Col lg={6}>
-                            <div className="features-box">
+                <Container className='container-fluid'>
+                    <Row >
+                        <Col lg={8}>
+                            <div className="features-box pt-5">
                                 <h3>
                                 WHO ARE THE
                                 </h3>
@@ -34,13 +34,15 @@ Those people who left behind wasn't happy about it and decided to unite! A small
                                  </p>
                             </div>
                         </Col>
-                        <Col lg={6}>
-                            <div className="features-img features-right text-right">
-                                <img
+                        <Col lg={4}>
+                            <div className="">
+                               <div className='features-img'>
+                               <img
                                     alt="Crypto Dickheads"
                                     src={"/images/about/aboutman.png"}
                                     className="img-fluid"
                                 />
+                               </div>
                             </div>
                         </Col>
                     </Row>

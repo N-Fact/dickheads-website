@@ -26,13 +26,13 @@ export default [
   },
   {
     id: 6,
-    idnm: "https://twitter.com/home",
+    idnm: "https://medium.com/@CryptoDickheads",
     target:"_blank",
     heading: "MEDIUM",
   },
   {
     id: 7,
-    idnm: "https://twitter.com/home",
+    idnm: "https://discord.com/invite/cryptodickheads",
     target:"_blank",
     heading: "DISCORD",
   },
@@ -44,7 +44,7 @@ export default [
   },
   {
     id: 9,
-    idnm: "https://twitter.com/home",
+    idnm: "https://marketplace.kalao.io/collection/0x8b5d2db7cdc60cc74972e922b48ba223b754d8c7",
     target:"_blank",
     heading: "VISIT COLLECTION",
   },

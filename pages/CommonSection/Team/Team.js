@@ -43,13 +43,13 @@ const teams = [
 const Team = props => {
     return (
         <React.Fragment>
-            <section className="section pt-4 team-box" id="team">
+            <section className="section pt-2 team-box" id="team">
             <SectionTitle
                         title="TEAM DICKHEADS"
-                        className="team-title text-left pt-4"
+                        className="team-title"
                     />
                 <Container>
-                    <Row className="mt-5">
+                    <Row className="mt-2">
                         <TeamBox teams={teams} />
                     </Row>
                 </Container>

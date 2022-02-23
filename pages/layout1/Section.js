@@ -23,7 +23,7 @@ const Section = () => {
                 <Container>
                       
                             <Row >
-                                <Col lg={12} className="text-center pt-4">
+                                <Col lg={12} className="text-center">
                                 <h1 className="home-title">
                                     CRYPTO DICKHEADS
                                     </h1>
@@ -64,7 +64,7 @@ const Section = () => {
                                     <span className='glow'>in 11 mins</span>
                                     </div>
                                    </div>
-                               <div className='home-info'>
+                               <div className='home-info '>
                                <img
                                     alt="Crypto Dickheads"
                                     src={"/images/home/homeinfo.png"}
@@ -78,7 +78,7 @@ const Section = () => {
                                 </div>
                                </div>
                                 </Col>
-                                <Col lg={4} className="home-right">
+                                <Col lg={4} className="home-right ">
                                 <img
                                     alt="Crypto Dickheads"
                                     src={"/images/home/home-man_04.png"}
@@ -96,8 +96,39 @@ const Section = () => {
                                 />
                                 </Col>
                             </Row>
-                           
                  </Container>
+                   <Container className='mobilehead'>
+                   <Row >
+                                <Col lg={12} >
+                               
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-woman_02.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_03.png"}
+                                    className="img-fluid"
+                                />
+   <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_04.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_05.png"}
+                                    className="img-fluid"
+                                />
+                                 <img
+                                    alt="Crypto Dickheads"
+                                    src={"/images/home/home-man_06.png"}
+                                    className="img-fluid"
+                                />
+                                </Col>
+                                </Row>
+                   </Container>
             </section>
         </React.Fragment>
     );

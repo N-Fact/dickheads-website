@@ -9,6 +9,7 @@ import '../styles/globals.css'
 import '../styles/video-react.css'
 import Layout from '../layouts/Landing';
 import  { EventProvider } from './Context/EventContext';
+import "../node_modules/react-modal-video/scss/modal-video.scss";
 
 function MyApp({ Component, pageProps }) {
   return(
