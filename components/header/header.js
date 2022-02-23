@@ -52,10 +52,6 @@ const header = props => {
           className="navbar-custom sticky sticky-dark"
         >
           <Container>
-           
-            <NavbarToggler onClick={toogleModal}>
-              <i className="mdi mdi-menu"></i>
-            </NavbarToggler>
 
             <Collapse
               id="navbarCollapse"

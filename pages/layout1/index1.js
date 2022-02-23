@@ -19,8 +19,12 @@ const layout1 = props => {
     return (
         <React.StrictMode>
             {/* import Header */}
+            <div className='container'>
+            <div className='bg-home'>
             <Header  play={play}/>
-            <Section />
+            </div>
+            </div>
+            {/* <Section />
             <AboutUs />
             <div className="clearfix"></div>
             <RoadMap />
@@ -33,7 +37,7 @@ const layout1 = props => {
             <div className="clearfix"></div>
             <FAQ />
             <TeaserV1  />
-            <Footer />
+            <Footer /> */}
         </React.StrictMode>
     );
 }
